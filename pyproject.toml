@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "linkedlist"
+version = "0.1.0"
+description = "How implement and visualize LinkedList"
+authors = ["atabekdemurtaza <mychannel21war@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pytest = "^8.3.2"
+loguru = "^0.7.2"
+graphviz = "^0.20.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
