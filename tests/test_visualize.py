@@ -1,4 +1,5 @@
 from unittest.mock import patch
+
 import visualize
 from linked_list import LinkedList
 from node import Node
