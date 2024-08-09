@@ -22,3 +22,20 @@ This repository contains an implementation of a singly linked list in Python, co
    ```bash
    git clone https://github.com/atabekdemurtaza/LinkedList_implementation.git
    cd LinkedList_implementation
+
+## Code Quality
+
+This project uses `flake8`, `black`, and `isort` for code quality checks.
+
+- **flake8**: Checks code against PEP 8 style guide.
+- **black**: Formats code according to PEP 8.
+- **isort**: Sorts imports alphabetically and by type.
+
+### Linting and Formatting
+
+To check code quality and format your code, run:
+
+```bash
+flake8
+black .
+isort .
