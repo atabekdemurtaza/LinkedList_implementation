@@ -20,13 +20,23 @@ black = "^24.8.0"
 isort = "^5.13.2"
 coverage = "^7.6.1"
 
+[tool.flake8]
+max-line-length = 88
+exclude = ".git,__pycache__,venv,*.pyc,*.pyo,*.pyd,.venv"
+
 [tool.black]
 line-length = 88
 
 [tool.isort]
 profile = 'black'
 
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--cov=linked_list --cov-report=term-missing"
+testpaths = [
+    "tests",
+]
