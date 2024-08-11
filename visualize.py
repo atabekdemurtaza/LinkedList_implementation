@@ -13,7 +13,7 @@ def visualize(linked_list, filename="./images/linkedlist"):
 
     node = linked_list.head
     while node is not None:
-        dot.node(str(id(node)), node.val)
+        dot.node(str(id(node)), str(node.val))
         if node.next:
             dot.edge(str(id(node)), str(id(node.next)))
         node = node.next

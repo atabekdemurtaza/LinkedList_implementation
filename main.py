@@ -4,29 +4,19 @@ from node import ListNode
 
 if __name__ == "__main__":
     llist = LinkedList()
-    # print(llist)
 
-    llist.add_first(ListNode("a"))
-    # print(llist)
-    llist.add_first(ListNode("b"))
-    # print(llist)
-    llist.add_first(ListNode("c"))
-    # print(llist)
+    llist.add_first(ListNode(val=1))
+    llist.add_first(ListNode(val=2))
+    llist.add_first(ListNode(val=3))
 
-    llist.add_last(ListNode("d"))
-    # print(llist)
-    llist.add_last(ListNode("e"))
-    # print(llist)
-    llist.add_last(ListNode("f"))
-    # print(llist)
+    llist.add_last(ListNode(val=4))
+    llist.add_last(ListNode(val=5))
+    llist.add_last(ListNode(val=6))
 
-    llist.add_after("d", ListNode("g"))
-    # print(llist)
+    llist.add_after(4, ListNode(val=7))
+    llist.add_before(2, ListNode(val=8))
 
-    llist.add_before("b", ListNode("v"))
-    # print(llist)
-
-    llist.remove_node("a")
+    llist.remove_node(1)
     print(llist)
 
     # Visualize the linked list
