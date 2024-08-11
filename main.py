@@ -1,30 +1,30 @@
 import visualize
 from linked_list import LinkedList
-from node import Node
+from node import ListNode
 
 if __name__ == "__main__":
     llist = LinkedList()
-    print(llist)
+    # print(llist)
 
-    llist.add_first(Node("a"))
-    print(llist)
-    llist.add_first(Node("b"))
-    print(llist)
-    llist.add_first(Node("c"))
-    print(llist)
+    llist.add_first(ListNode("a"))
+    # print(llist)
+    llist.add_first(ListNode("b"))
+    # print(llist)
+    llist.add_first(ListNode("c"))
+    # print(llist)
 
-    llist.add_last(Node("d"))
-    print(llist)
-    llist.add_last(Node("e"))
-    print(llist)
-    llist.add_last(Node("f"))
-    print(llist)
+    llist.add_last(ListNode("d"))
+    # print(llist)
+    llist.add_last(ListNode("e"))
+    # print(llist)
+    llist.add_last(ListNode("f"))
+    # print(llist)
 
-    llist.add_after("d", Node("g"))
-    print(llist)
+    llist.add_after("d", ListNode("g"))
+    # print(llist)
 
-    llist.add_before("b", Node("v"))
-    print(llist)
+    llist.add_before("b", ListNode("v"))
+    # print(llist)
 
     llist.remove_node("a")
     print(llist)

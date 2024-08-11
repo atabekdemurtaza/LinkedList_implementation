@@ -1,12 +1,14 @@
+from typing import Optional, Iterator
 from loguru import logger
+from node import ListNode
 
 
 class LinkedList:
     def __init__(self):
-        self.head = None
+        self.head: Optional[ListNode] = None
         logger.info("Initialized an empty LinkedList.")
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         node = self.head
         nodes = []
         while node is not None:
@@ -15,20 +17,20 @@ class LinkedList:
         nodes.append("None")
         return " -> ".join(nodes)
 
-    def __iter__(self):
+    def __iter__(self) -> Iterator[ListNode]:
         node = self.head
         while node is not None:
             yield node
             node = node.next
 
     # Inserting from the beginning.
-    def add_first(self, node):
+    def add_first(self, node: Optional[ListNode]) -> None:
         logger.info(f"Adding {node.val} at the beginning.")
         node.next = self.head
         self.head = node
 
     # Inserting from the end
-    def add_last(self, node):
+    def add_last(self, node: Optional[ListNode]) -> None:
         logger.info(f"Adding {node.val} at the end.")
         if self.head is None:
             self.head = node
@@ -39,7 +41,7 @@ class LinkedList:
         current_node.next = node
 
     # Inserting Between Two Nodes
-    def add_after(self, target_node_data, new_node):
+    def add_after(self, target_node_data: int, new_node: ListNode) -> None:
         logger.info(f"Adding {new_node.val} after {target_node_data}.")
         if self.head is None:
             raise Exception("List is empty.")
@@ -53,7 +55,7 @@ class LinkedList:
         raise Exception(f"Node with data '{target_node_data}' not found.")
 
     # Inserting Before
-    def add_before(self, target_node_data, new_node):
+    def add_before(self, target_node_data: int, new_node: Optional[ListNode]) -> None:
         logger.info(f"Adding {new_node.val} before {target_node_data}.")
         if self.head is None:
             raise Exception("List is empty.")
@@ -72,7 +74,7 @@ class LinkedList:
         raise Exception("Node with data '%s' not found." % target_node_data)
 
     # Removing node
-    def remove_node(self, target_node_data):
+    def remove_node(self, target_node_data: int):
         logger.info(f"Removing {target_node_data}")
         if self.head is None:
             raise Exception("List is empty")
