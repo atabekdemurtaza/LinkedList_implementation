@@ -1,5 +1,7 @@
-from typing import Optional, Iterator
+from typing import Iterator, Optional
+
 from loguru import logger
+
 from node import ListNode
 
 
